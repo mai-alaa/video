@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:video_call_app/modules/sign/cubit/cubit.dart';
+import 'package:video_call_app/modules/videoCall/VideoLayout.dart';
 import 'package:video_call_app/modules/videoCall/ils_screen.dart';
 import 'package:video_call_app/shared/components/components.dart';
 import 'package:video_call_app/shared/cubit/states.dart';
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             body: Center(
               child: defaultButton(
                   function: () {
-                    AppCubit.get(context).onCreateButtonPressed(context);
+                    navigateAndFinish(context, VideoCallLayout());
                   },
                   text: 'video call'),
             ),
